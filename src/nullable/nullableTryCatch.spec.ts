@@ -1,7 +1,7 @@
 import { describe, it, vi, expect } from 'vitest';
 import { nullableTryCatch } from './nullableTryCatch';
 
-describe('Try catch', () => {
+describe('Nullable try catch', () => {
   it('should call the passed function to it', () => {
     const execute = vi.fn();
     nullableTryCatch(execute);
@@ -22,15 +22,5 @@ describe('Try catch', () => {
     };
 
     expect(nullableTryCatch(execute)).toBeNull();
-  });
-
-  it('should return the handler return value if there is an error', () => {
-    const execute = () => {
-      throw 'custom error message';
-    };
-
-    const parsedError = nullableTryCatch(execute);
-
-    expect(parsedError).toBe('handled error');
   });
 });
