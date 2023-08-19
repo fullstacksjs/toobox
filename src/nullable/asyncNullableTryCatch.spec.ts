@@ -17,10 +17,7 @@ describe('Nullable async try catch', () => {
   });
 
   it('should return null if there is an error', async () => {
-    const execute = () =>
-      new Promise((_resolve, reject) => {
-        reject('custom error message');
-      });
+    const execute = () => Promise.reject('custom error message');
 
     expect(await asyncNullableTryCatch(execute)).toBeNull();
   });
