@@ -1,5 +1,5 @@
 export async function asyncTryCatch<T, E>(
-  fn: (...args: any[]) => T,
+  fn: (...args: any[]) => Promise<T>,
   onError: (err: unknown) => E,
 ): Promise<E | T> {
   try {
