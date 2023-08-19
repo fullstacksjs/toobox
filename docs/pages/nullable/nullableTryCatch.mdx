@@ -1,0 +1,36 @@
+# nullableTryCatch
+
+nullableTryCatch asynchronously runs the function passed to it and returns its
+return value if everything goes right. If an error is thrown, it returns null
+
+### Import
+
+```typescript copy
+import { nullableTryCatch } from '@fullstacksjs/toolbox';
+```
+
+### Signature
+
+```typescript copy
+function nullableTryCatch<T>(fn: (...args: any[]) => T): T | null
+```
+
+### Examples
+
+If there are no errors:
+
+```typescript copy
+const execute = () => 'ok';
+
+nullableTryCatch(execute); // 'ok'
+```
+
+If there is an error:
+
+```typescript copy
+const execute = () => {
+  throw 'Unknown Error';
+};
+
+nullableTryCatch(execute); // null
+```

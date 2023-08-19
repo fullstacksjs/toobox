@@ -1,0 +1,37 @@
+# asyncNullableTryCatch
+
+asyncNullableTryCatch asynchronously runs the function passed to it and returns
+its return value if everything goes right. If an error is thrown, it returns
+null
+
+### Import
+
+```typescript copy
+import { asyncNullableTryCatch } from '@fullstacksjs/toolbox';
+```
+
+### Signature
+
+```typescript copy
+async function asyncNullableTryCatch<T>(
+  fn: (...args: any[]) => Promise<T>,
+): Promise<T | null>;
+```
+
+### Examples
+
+If there are no errors:
+
+```typescript copy
+const execute = () => Promise.resolve('ok');
+
+await asyncNullableTryCatch(execute); // 'ok'
+```
+
+If there is an error:
+
+```typescript copy
+const execute = () => Promise.reject('Unknown Error');
+
+await asyncNullableTryCatch(execute); // null
+```
