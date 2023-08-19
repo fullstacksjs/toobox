@@ -1,0 +1,46 @@
+# asyncTryCatch
+
+asyncTryCatch asynchronously runs the function passed to it and returns its return value if
+everything goes right. If an error is thrown, it calls the error handler passed
+to it and returns its return value
+
+### Import
+
+```typescript copy
+import { asyncTryCatch } from '@fullstacksjs/toolbox';
+```
+
+### Signature
+
+```typescript copy
+export async function asyncTryCatch<T, E>(
+  fn: (...args: any[]) => Promise<T>,
+  onError: (err: unknown) => E,
+): Promise<E | T>;
+```
+
+### Examples
+
+If there are no errors:
+
+```typescript copy
+const execute = () => Promise.resolve('ok');
+
+const handler = (err: unknown) => {
+  return 'Parsed Error';
+};
+
+await asyncTryCatch(execute, handler); // 'ok'
+```
+
+If there is an error:
+
+```typescript copy
+const execute = () => Promise.reject('custom error message');
+
+const handler = (err: unknown) => {
+  return 'Parsed Error';
+};
+
+await asyncTryCatch(execute, handler); // 'Parsed Error'
+```
