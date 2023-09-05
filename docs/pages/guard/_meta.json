@@ -5,6 +5,7 @@
   "is-not-null": "isNotNull",
   "is-null": "isNull",
   "is-object": "isObject",
+  "is-promise": "isPromise",
   "is-string": "isString",
   "is-truthy": "isTruthy"
 }

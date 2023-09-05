@@ -1,0 +1,31 @@
+# isPromise
+
+Check whether the given value is Promise
+
+### Import
+
+```typescript copy
+import { isPromise } from '@fullstacksjs/toolbox';
+```
+
+### Signature
+
+```typescript copy
+function isPromise(x: unknown): x is Promise<unknown> {};
+```
+
+### Examples
+
+```typescript copy
+isPromise(null)           // false
+isPromise(undefined)      // false
+isPromise(42)             // false
+isPromise('then')         // false
+isPromise(true)           // false
+isPromise({})             // false
+isPromise([])             // false
+isPromise([true])         // false
+isPromise(() => {})       // false
+isPromise({ then: true }) // false
+isPromise({ then: fn })   // true
+```

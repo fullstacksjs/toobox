@@ -6,3 +6,4 @@ export { isNull } from './isNull.ts';
 export { isObject } from './isObject.ts';
 export { isString } from './isString.ts';
 export { isTruthy } from './isTruthy.ts';
+export { isPromise } from './isPromise.ts';

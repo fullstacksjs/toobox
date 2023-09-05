@@ -26,6 +26,7 @@ module.exports = init({
         'func-style': 'off',
         'fp/no-loops': 'off',
         'no-sparse-arrays': 'off',
+        '@typescript-eslint/no-empty-function': 'off',
       },
     },
   ],
