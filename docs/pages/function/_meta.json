@@ -4,5 +4,6 @@
   "noop": "noop",
   "not": "not",
   "sleep": "sleep",
-  "throttle": "throttle"
+  "throttle": "throttle",
+  "try-or": "tryOr"
 }

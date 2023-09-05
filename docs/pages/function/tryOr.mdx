@@ -1,0 +1,34 @@
+# tryOr
+
+Calls fn and returns its return value if there are no errors; but if there are
+any, calls onError and returns its return value
+
+### Import
+
+```typescript copy
+import { tryOr } from '@fullstacksjs/toolbox';
+```
+
+### Signature
+
+```typescript copy
+function tryOr<TReturn>(fn: () => TReturn): TReturn;
+function tryOr<TError, THandlerReturn>(fn: () => never, or: (error: TError) => THandlerReturn): THandlerReturn;
+function tryOr<TReturn, TError, THandlerReturn>(fn: () => Promise<TReturn>, or: (error: TError) => THandlerReturn): Promise<THandlerReturn | TReturn>;
+function tryOr<TReturn, TError, THandlerReturn>(fn: () => TReturn, or: (error: TError) => THandlerReturn): THandlerReturn | TReturn;
+```
+
+### Examples
+
+If there are no errors:
+
+```typescript copy
+tryOr(() => { throw 'Whoops' });                                      // 'Whoops'
+tryOr(() => 'Success', () => 'Error');                                // 'Success'
+tryOr(() => { throw 0 } , (e: number) => e + 1);                      // 1
+tryOr(() => { if(rnd) throw 'Error'; return 0 } , (e: 'Error') => e); // 0 | 'Errror'
+
+tryOr(() => Promise.resolve(0));                      // 0
+tryOr(() => Promise.reject(1));                       // Promise<1>
+tryOr(() => Promise.reject(0), (e: number) => e + 1); // Promise<1>
+```
