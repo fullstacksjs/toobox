@@ -10,11 +10,11 @@ import { fallbackNumber } from './fallbackNumber.ts';
  *
  * @example
  *
- * toInteger('S'))            // NaN
- * toInteger('100'))          // 100
- * toInteger('1.42'))         // 1
- * toInteger('S', 10))        // 10
- * toInteger('S', undefined)) // NaN
+ * toInteger('S')            // NaN
+ * toInteger('100')          // 100
+ * toInteger('1.42')         // 1
+ * toInteger('S', 10)        // 10
+ * toInteger('S', undefined) // NaN
  */
 export function toDecimal(s: string, fallback: number = NaN): number {
   return fallbackNumber(Number.parseInt(s, 10), fallback);
