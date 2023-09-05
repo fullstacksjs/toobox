@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { pruneKeyWhen } from './pruneKeyWhen.ts';
 
 describe('pruneKeyWhen', () => {

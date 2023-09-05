@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { removeTrailingSlashes } from './removeTrailingSlashes.ts';
 
 describe('removeTrailingSlash', () => {

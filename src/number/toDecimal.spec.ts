@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { toDecimal } from './toDecimal.ts';
 
 describe('toDecimal', () => {
@@ -18,7 +17,7 @@ describe('toDecimal', () => {
     expect(toDecimal('S', 10)).toBe(10);
   });
 
-  it('should return undefined if input is not a number and fallback is undefined', () => {
-    expect(toDecimal('S', undefined)).toBe(NaN);
+  it('should return nan if input is not a number and fallback is undefined', () => {
+    expect(toDecimal('S', undefined)).toBeNaN();
   });
 });

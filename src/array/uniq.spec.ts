@@ -1,5 +1,4 @@
 import { uniq } from './uniq';
-import { describe, expect, it } from 'vitest';
 
 describe('uniq', () => {
   it('should not mutate original array', () => {

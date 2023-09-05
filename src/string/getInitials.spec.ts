@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { getInitials } from './getInitials.ts';
 
 describe('getInitials', () => {

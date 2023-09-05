@@ -1,5 +1,3 @@
-import { describe, expect, it } from 'vitest';
-
 import { bind } from './bind.ts';
 import type { Nullable } from '../types/types.ts';
 
@@ -30,10 +28,6 @@ describe('bind', () => {
   );
 
   it('should return null if first arg is null', () => {
-    expect(bind(null, f, g, h, j, k)).eq(null);
-  });
-
-  it('should return null if any composed function returned null', () => {
     expect(bind(null, f, g, h, j, k)).eq(null);
   });
 

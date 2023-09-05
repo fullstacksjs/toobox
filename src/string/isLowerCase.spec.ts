@@ -1,5 +1,3 @@
-import { describe, expect, it } from 'vitest';
-
 import { isLowerCase } from './isLowerCase.ts';
 
 describe('isLowerCase', () => {

@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { crlfToLf } from './crlfToLf.ts';
 
 describe('crlfToLf', () => {

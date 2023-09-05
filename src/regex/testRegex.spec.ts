@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { testRegex } from './testRegex.ts';
 
 describe('testRegex', () => {

@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { shuffle } from './shuffle.ts';
 import { range } from './range.ts';
 

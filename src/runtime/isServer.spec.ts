@@ -1,4 +1,3 @@
-import { beforeEach, describe, expect, it } from 'vitest';
 import {
   clearMocks,
   mockBunGlobal,
@@ -30,7 +29,7 @@ describe('isServer', () => {
     expect(isServer()).toBe(true);
   });
 
-  it('should return true in node', () => {
+  it('should return true in deno', () => {
     mockDenoGlobal();
 
     expect(isServer()).toBe(true);

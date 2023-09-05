@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { pruneValueWhen } from './pruneValueWhen.ts';
 
 describe('pruneValueWhen', () => {

@@ -1,4 +1,3 @@
-import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { getNodeEnv } from './getNodeEnv.ts';
 
 describe('getNodeEnv', () => {
@@ -21,7 +20,7 @@ describe('getNodeEnv', () => {
   it('should return undefined when the NODE_ENV is undefined', () => {
     vi.stubEnv('NODE_ENV', '');
 
-    expect(getNodeEnv()).toBe(undefined);
+    expect(getNodeEnv()).toBeUndefined();
   });
 
   it('should return fallback when the NODE_ENV is undefined', () => {

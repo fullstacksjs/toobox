@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { range } from './range.ts';
 
 describe('range', () => {

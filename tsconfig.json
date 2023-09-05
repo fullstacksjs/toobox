@@ -2,9 +2,10 @@
   "extends": "./tsconfig.build.json",
   "compilerOptions": {
     "emitDeclarationOnly": true,
-    "allowImportingTsExtensions": true
+    "allowImportingTsExtensions": true,
+    "types": ["vitest/globals"]
   },
-  "files": ["./mod.ts"],
+  "files": ["./mod.ts", "vite.config.ts"],
   "include": ["src/"],
   "exclude": []
 }

@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { removeLeadingSlashes } from './removeLeadingSlashes.ts';
 
 describe('removeLeadingSlash', () => {

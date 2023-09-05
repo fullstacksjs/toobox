@@ -1,5 +1,4 @@
 import { debounce } from './debounce';
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 describe('debounce', () => {
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('debounce', () => {
     debouncedFunction(1, 2);
     vi.advanceTimersByTime(1000);
 
-    expect(execute).toBeCalledWith(1, 2);
+    expect(execute).toHaveBeenCalledWith(1, 2);
   });
 
   it('should execute once after the delay', () => {
@@ -29,7 +28,7 @@ describe('debounce', () => {
     debouncedFunction();
     vi.advanceTimersByTime(1000);
 
-    expect(execute).toBeCalledTimes(1);
+    expect(execute).toHaveBeenCalledTimes(1);
   });
 
   it('should not execute before the delay', () => {
@@ -39,7 +38,7 @@ describe('debounce', () => {
     debouncedFunction();
     vi.advanceTimersByTime(500);
 
-    expect(execute).toBeCalledTimes(0);
+    expect(execute).toHaveBeenCalledTimes(0);
   });
 
   it('should execute once after the last call with delay', () => {
@@ -53,7 +52,7 @@ describe('debounce', () => {
     }
     vi.advanceTimersByTime(500);
 
-    expect(execute).toBeCalledTimes(1);
+    expect(execute).toHaveBeenCalledTimes(1);
   });
 
   it('should execute whenever not called within the delay period', () => {
@@ -69,7 +68,7 @@ describe('debounce', () => {
       vi.advanceTimersByTime(500);
     }
 
-    expect(execute).toBeCalledTimes(5);
+    expect(execute).toHaveBeenCalledTimes(5);
   });
 
   it('should execute immediately', () => {
@@ -81,7 +80,7 @@ describe('debounce', () => {
     );
     debouncedFunction();
 
-    expect(execute).toBeCalledTimes(1);
+    expect(execute).toHaveBeenCalledTimes(1);
   });
 
   it('should not execute after the delay if immediate is true', () => {
@@ -94,7 +93,7 @@ describe('debounce', () => {
     debouncedFunction();
     vi.advanceTimersByTime(1000);
 
-    expect(execute).toBeCalledTimes(1);
+    expect(execute).toHaveBeenCalledTimes(1);
   });
 
   it('should execute whenever not called within the delay period and then execute immediately with another call', () => {
@@ -113,6 +112,6 @@ describe('debounce', () => {
       vi.advanceTimersByTime(500);
     }
 
-    expect(execute).toBeCalledTimes(10);
+    expect(execute).toHaveBeenCalledTimes(10);
   });
 });

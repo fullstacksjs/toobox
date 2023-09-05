@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { concatArrays } from './concatArrays.ts';
 
 describe('concatArrays', () => {

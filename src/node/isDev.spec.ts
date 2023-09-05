@@ -1,4 +1,3 @@
-import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { isDev } from './isDev.ts';
 
 describe('isDev', () => {

@@ -1,7 +1,7 @@
 /**
  * Expression form of throw
  *
- * @param {any} err error to throw
+ * @param {unknown} err error to throw
  * @returns {never} never returns!
  *
  * @example

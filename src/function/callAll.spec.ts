@@ -1,4 +1,3 @@
-import { describe, it, vi, expect } from 'vitest';
 import { callAll } from './callAll.ts';
 
 describe('callAll', () => {

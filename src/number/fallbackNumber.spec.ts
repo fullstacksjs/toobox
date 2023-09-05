@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { fallbackNumber } from './fallbackNumber.js';
 
 describe('fallbackNumber', () => {

@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { isString } from './isString.ts';
 
 describe('isString', () => {

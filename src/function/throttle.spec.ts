@@ -1,5 +1,5 @@
 import { throttle } from './throttle';
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+
 const oneSecond = 1000;
 
 describe('throttle', () => {
@@ -39,7 +39,7 @@ describe('throttle', () => {
     vi.advanceTimersByTime(1000);
     throttled();
 
-    expect(callback).toBeCalledTimes(2);
+    expect(callback).toHaveBeenCalledTimes(2);
   });
 
   it('should not execute function within the delay time', () => {

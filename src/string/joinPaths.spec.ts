@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { joinPaths } from './joinPaths.ts';
 
 describe('joinPaths', () => {

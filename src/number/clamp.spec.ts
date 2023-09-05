@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { clamp } from './clamp.ts';
 
 describe('clamp', () => {

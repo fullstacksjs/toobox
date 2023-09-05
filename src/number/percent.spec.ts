@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { percent } from './percent.ts';
 
 describe('percent', () => {

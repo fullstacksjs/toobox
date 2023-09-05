@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { assertNotNull } from './assertNotNull.ts';
 
 describe('assertNotNull', () => {

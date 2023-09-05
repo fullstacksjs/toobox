@@ -1,5 +1,3 @@
-import { describe, expect, it } from 'vitest';
-
 import { comparePaths } from './comparePaths.ts';
 
 describe('comparePaths', () => {

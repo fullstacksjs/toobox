@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { compact } from './compact.ts';
 
 describe('compact', () => {

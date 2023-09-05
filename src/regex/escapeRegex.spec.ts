@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { escapeRegex } from './escapeRegex.ts';
 
 describe('escapeRegex', () => {

@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { toCamelCase } from './toCamelCase.ts';
 
 describe('toCamelCase', () => {

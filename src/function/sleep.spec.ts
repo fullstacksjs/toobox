@@ -1,5 +1,3 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-
 import { sleep } from './sleep.ts';
 
 describe('sleep', () => {
@@ -15,13 +13,13 @@ describe('sleep', () => {
   it('should call the inner timeout function', () => {
     sleep(1000);
 
-    expect(globalThis.setTimeout).toBeCalledTimes(1);
+    expect(globalThis.setTimeout).toHaveBeenCalledTimes(1);
   });
 
-  it('should resolve after the timeout', () => {
+  it('should resolve after the timeout', async () => {
     const v = sleep(1000);
     vi.advanceTimersByTime(1000);
 
-    expect(v).resolves.toBe(undefined);
+    await expect(v).resolves.toBeUndefined();
   });
 });

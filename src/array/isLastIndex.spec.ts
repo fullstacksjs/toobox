@@ -1,5 +1,3 @@
-import { describe, expect, it } from 'vitest';
-
 import { isLastIndex } from './isLastIndex.ts';
 
 describe('array', () => {

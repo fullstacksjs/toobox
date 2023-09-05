@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { toArray } from './toArray.ts';
 
 describe('toArray', () => {
@@ -10,7 +9,7 @@ describe('toArray', () => {
     expect(toArray(undefined)).toStrictEqual([]);
   });
 
-  it('should wrap string value with an array', () => {
+  it('should return array of characters from a string', () => {
     expect(toArray('string')).toStrictEqual(['s', 't', 'r', 'i', 'n', 'g']);
   });
 
@@ -18,7 +17,7 @@ describe('toArray', () => {
     expect(toArray([1])).toStrictEqual([1]);
   });
 
-  it("should return the argument if it's already an array", () => {
+  it('should wrap a non-iterables within an array', () => {
     expect(toArray(1)).toStrictEqual([1]);
   });
 
